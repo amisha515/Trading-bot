@@ -1,0 +1,2 @@
+2026-04-16 23:05:19 - trading_bot - ERROR - API keys not found in .env file
+2026-04-16 23:05:19 - trading_bot - ERROR - Connection failed: BINANCE_API_KEY and BINANCE_API_SECRET must be set in .env file

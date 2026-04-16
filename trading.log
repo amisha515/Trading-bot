@@ -1,0 +1,477 @@
+2026-04-16 23:11:35 - trading_bot - DEBUG - Order type validated: LIMIT
+2026-04-16 23:11:35 - trading_bot - ERROR - API keys not found in .env file
+2026-04-16 23:11:35 - trading_bot - ERROR - Error: API_KEY and API_SECRET must be set in .env file
+2026-04-16 23:11:35 - trading_bot - ERROR - API keys not found in .env file
+2026-04-16 23:11:35 - trading_bot - ERROR - Connection failed: API_KEY and API_SECRET must be set in .env file
+2026-04-16 23:11:59 - trading_bot - DEBUG - Order type validated: LIMIT
+2026-04-16 23:11:59 - trading_bot - DEBUG - Order type validated: LIMIT
+2026-04-16 23:11:59 - trading_bot - DEBUG - Symbol validated: BTCUSDT
+2026-04-16 23:11:59 - trading_bot - DEBUG - Side validated: BUY
+2026-04-16 23:11:59 - trading_bot - DEBUG - Quantity validated: 0.001
+2026-04-16 23:11:59 - trading_bot - DEBUG - Order type validated: LIMIT
+2026-04-16 23:11:59 - trading_bot - ERROR - Validation Error: Price is required for LIMIT orders
+2026-04-16 23:11:59 - trading_bot - DEBUG - Order type validated: MARKET
+2026-04-16 23:11:59 - trading_bot - DEBUG - Order type validated: MARKET
+2026-04-16 23:11:59 - trading_bot - DEBUG - Symbol validated: BTCUSDT
+2026-04-16 23:11:59 - trading_bot - DEBUG - Side validated: BUY
+2026-04-16 23:11:59 - trading_bot - DEBUG - Quantity validated: 0.001
+2026-04-16 23:11:59 - trading_bot - DEBUG - Order type validated: MARKET
+2026-04-16 23:11:59 - trading_bot - DEBUG - Price validation skipped for MARKET order
+2026-04-16 23:11:59 - trading_bot - DEBUG - Validated order request: {'symbol': 'BTCUSDT', 'side': 'BUY', 'type': 'MARKET', 'quantity': 0.001}
+2026-04-16 23:11:59 - trading_bot - ERROR - API keys not found in .env file
+2026-04-16 23:11:59 - trading_bot - ERROR - Error: API_KEY and API_SECRET must be set in .env file
+2026-04-16 23:12:24 - trading_bot - ERROR - API keys not found in .env file
+2026-04-16 23:12:24 - trading_bot - ERROR - Connection failed: API_KEY and API_SECRET must be set in .env file
+2026-04-16 23:12:40 - trading_bot - DEBUG - Order type validated: MARKET
+2026-04-16 23:12:40 - trading_bot - DEBUG - Order type validated: MARKET
+2026-04-16 23:12:40 - trading_bot - DEBUG - Symbol validated: BTCUSDT
+2026-04-16 23:12:40 - trading_bot - DEBUG - Side validated: BUY
+2026-04-16 23:12:40 - trading_bot - DEBUG - Quantity validated: 0.001
+2026-04-16 23:12:40 - trading_bot - DEBUG - Order type validated: MARKET
+2026-04-16 23:12:40 - trading_bot - DEBUG - Price validation skipped for MARKET order
+2026-04-16 23:12:40 - trading_bot - DEBUG - Validated order request: {'symbol': 'BTCUSDT', 'side': 'BUY', 'type': 'MARKET', 'quantity': 0.001}
+2026-04-16 23:12:42 - trading_bot - ERROR - Failed to initialize client
+Traceback (most recent call last):
+  File "C:\Users\AMISH\OneDrive\Desktop\Assignmentt\trading_bot\venv\Lib\site-packages\urllib3\connection.py", line 204, in _new_conn
+    sock = connection.create_connection(
+        (self._dns_host, self.port),
+    ...<2 lines>...
+        socket_options=self.socket_options,
+    )
+  File "C:\Users\AMISH\OneDrive\Desktop\Assignmentt\trading_bot\venv\Lib\site-packages\urllib3\util\connection.py", line 85, in create_connection
+    raise err
+  File "C:\Users\AMISH\OneDrive\Desktop\Assignmentt\trading_bot\venv\Lib\site-packages\urllib3\util\connection.py", line 73, in create_connection
+    sock.connect(sa)
+    ~~~~~~~~~~~~^^^^
+ConnectionRefusedError: [WinError 10061] No connection could be made because the target machine actively refused it
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\AMISH\OneDrive\Desktop\Assignmentt\trading_bot\venv\Lib\site-packages\urllib3\connectionpool.py", line 773, in urlopen
+    self._prepare_proxy(conn)
+    ~~~~~~~~~~~~~~~~~~~^^^^^^
+  File "C:\Users\AMISH\OneDrive\Desktop\Assignmentt\trading_bot\venv\Lib\site-packages\urllib3\connectionpool.py", line 1042, in _prepare_proxy
+    conn.connect()
+    ~~~~~~~~~~~~^^
+  File "C:\Users\AMISH\OneDrive\Desktop\Assignmentt\trading_bot\venv\Lib\site-packages\urllib3\connection.py", line 759, in connect
+    self.sock = sock = self._new_conn()
+                       ~~~~~~~~~~~~~~^^
+  File "C:\Users\AMISH\OneDrive\Desktop\Assignmentt\trading_bot\venv\Lib\site-packages\urllib3\connection.py", line 219, in _new_conn
+    raise NewConnectionError(
+        self, f"Failed to establish a new connection: {e}"
+    ) from e
+urllib3.exceptions.NewConnectionError: HTTPSConnection(host='127.0.0.1', port=9): Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it
+
+The above exception was the direct cause of the following exception:
+
+urllib3.exceptions.ProxyError: ('Unable to connect to proxy', NewConnectionError("HTTPSConnection(host='127.0.0.1', port=9): Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it"))
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\AMISH\OneDrive\Desktop\Assignmentt\trading_bot\venv\Lib\site-packages\requests\adapters.py", line 645, in send
+    resp = conn.urlopen(
+        method=request.method,
+    ...<9 lines>...
+        chunked=chunked,
+    )
+  File "C:\Users\AMISH\OneDrive\Desktop\Assignmentt\trading_bot\venv\Lib\site-packages\urllib3\connectionpool.py", line 841, in urlopen
+    retries = retries.increment(
+        method, url, error=new_e, _pool=self, _stacktrace=sys.exc_info()[2]
+    )
+  File "C:\Users\AMISH\OneDrive\Desktop\Assignmentt\trading_bot\venv\Lib\site-packages\urllib3\util\retry.py", line 535, in increment
+    raise MaxRetryError(_pool, url, reason) from reason  # type: ignore[arg-type]
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+urllib3.exceptions.MaxRetryError: HTTPSConnectionPool(host='testnet.binance.vision', port=443): Max retries exceeded with url: /api/v3/ping (Caused by ProxyError('Unable to connect to proxy', NewConnectionError("HTTPSConnection(host='127.0.0.1', port=9): Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it")))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\AMISH\OneDrive\Desktop\Assignmentt\trading_bot\bot\client.py", line 89, in initialize_client
+    client = BinanceFuturesClient(api_key, api_secret, base_url)
+  File "C:\Users\AMISH\OneDrive\Desktop\Assignmentt\trading_bot\bot\client.py", line 21, in __init__
+    self._client = Client(api_key, api_secret, testnet=True)
+                   ~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\AMISH\OneDrive\Desktop\Assignmentt\trading_bot\venv\Lib\site-packages\binance\client.py", line 344, in __init__
+    self.ping()
+    ~~~~~~~~~^^
+  File "C:\Users\AMISH\OneDrive\Desktop\Assignmentt\trading_bot\venv\Lib\site-packages\binance\client.py", line 570, in ping
+    return self._get('ping', version=self.PRIVATE_API_VERSION)
+           ~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\AMISH\OneDrive\Desktop\Assignmentt\trading_bot\venv\Lib\site-packages\binance\client.py", line 415, in _get
+    return self._request_api('get', path, signed, version, **kwargs)
+           ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\AMISH\OneDrive\Desktop\Assignmentt\trading_bot\venv\Lib\site-packages\binance\client.py", line 378, in _request_api
+    return self._request(method, uri, signed, **kwargs)
+           ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\AMISH\OneDrive\Desktop\Assignmentt\trading_bot\venv\Lib\site-packages\binance\client.py", line 358, in _request
+    self.response = getattr(self.session, method)(uri, **kwargs)
+                    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+  File "C:\Users\AMISH\OneDrive\Desktop\Assignmentt\trading_bot\venv\Lib\site-packages\requests\sessions.py", line 605, in get
+    return self.request("GET", url, **kwargs)
+           ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\AMISH\OneDrive\Desktop\Assignmentt\trading_bot\venv\Lib\site-packages\requests\sessions.py", line 592, in request
+    resp = self.send(prep, **send_kwargs)
+  File "C:\Users\AMISH\OneDrive\Desktop\Assignmentt\trading_bot\venv\Lib\site-packages\requests\sessions.py", line 706, in send
+    r = adapter.send(request, **kwargs)
+  File "C:\Users\AMISH\OneDrive\Desktop\Assignmentt\trading_bot\venv\Lib\site-packages\requests\adapters.py", line 672, in send
+    raise ProxyError(e, request=request)
+requests.exceptions.ProxyError: HTTPSConnectionPool(host='testnet.binance.vision', port=443): Max retries exceeded with url: /api/v3/ping (Caused by ProxyError('Unable to connect to proxy', NewConnectionError("HTTPSConnection(host='127.0.0.1', port=9): Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it")))
+2026-04-16 23:12:42 - trading_bot - ERROR - Connection failed: Failed to initialize client: HTTPSConnectionPool(host='testnet.binance.vision', port=443): Max retries exceeded with url: /api/v3/ping (Caused by ProxyError('Unable to connect to proxy', NewConnectionError("HTTPSConnection(host='127.0.0.1', port=9): Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it")))
+2026-04-16 23:12:42 - trading_bot - ERROR - Failed to initialize client
+Traceback (most recent call last):
+  File "C:\Users\AMISH\OneDrive\Desktop\Assignmentt\trading_bot\venv\Lib\site-packages\urllib3\connection.py", line 204, in _new_conn
+    sock = connection.create_connection(
+        (self._dns_host, self.port),
+    ...<2 lines>...
+        socket_options=self.socket_options,
+    )
+  File "C:\Users\AMISH\OneDrive\Desktop\Assignmentt\trading_bot\venv\Lib\site-packages\urllib3\util\connection.py", line 85, in create_connection
+    raise err
+  File "C:\Users\AMISH\OneDrive\Desktop\Assignmentt\trading_bot\venv\Lib\site-packages\urllib3\util\connection.py", line 73, in create_connection
+    sock.connect(sa)
+    ~~~~~~~~~~~~^^^^
+ConnectionRefusedError: [WinError 10061] No connection could be made because the target machine actively refused it
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\AMISH\OneDrive\Desktop\Assignmentt\trading_bot\venv\Lib\site-packages\urllib3\connectionpool.py", line 773, in urlopen
+    self._prepare_proxy(conn)
+    ~~~~~~~~~~~~~~~~~~~^^^^^^
+  File "C:\Users\AMISH\OneDrive\Desktop\Assignmentt\trading_bot\venv\Lib\site-packages\urllib3\connectionpool.py", line 1042, in _prepare_proxy
+    conn.connect()
+    ~~~~~~~~~~~~^^
+  File "C:\Users\AMISH\OneDrive\Desktop\Assignmentt\trading_bot\venv\Lib\site-packages\urllib3\connection.py", line 759, in connect
+    self.sock = sock = self._new_conn()
+                       ~~~~~~~~~~~~~~^^
+  File "C:\Users\AMISH\OneDrive\Desktop\Assignmentt\trading_bot\venv\Lib\site-packages\urllib3\connection.py", line 219, in _new_conn
+    raise NewConnectionError(
+        self, f"Failed to establish a new connection: {e}"
+    ) from e
+urllib3.exceptions.NewConnectionError: HTTPSConnection(host='127.0.0.1', port=9): Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it
+
+The above exception was the direct cause of the following exception:
+
+urllib3.exceptions.ProxyError: ('Unable to connect to proxy', NewConnectionError("HTTPSConnection(host='127.0.0.1', port=9): Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it"))
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\AMISH\OneDrive\Desktop\Assignmentt\trading_bot\venv\Lib\site-packages\requests\adapters.py", line 645, in send
+    resp = conn.urlopen(
+        method=request.method,
+    ...<9 lines>...
+        chunked=chunked,
+    )
+  File "C:\Users\AMISH\OneDrive\Desktop\Assignmentt\trading_bot\venv\Lib\site-packages\urllib3\connectionpool.py", line 841, in urlopen
+    retries = retries.increment(
+        method, url, error=new_e, _pool=self, _stacktrace=sys.exc_info()[2]
+    )
+  File "C:\Users\AMISH\OneDrive\Desktop\Assignmentt\trading_bot\venv\Lib\site-packages\urllib3\util\retry.py", line 535, in increment
+    raise MaxRetryError(_pool, url, reason) from reason  # type: ignore[arg-type]
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+urllib3.exceptions.MaxRetryError: HTTPSConnectionPool(host='testnet.binance.vision', port=443): Max retries exceeded with url: /api/v3/ping (Caused by ProxyError('Unable to connect to proxy', NewConnectionError("HTTPSConnection(host='127.0.0.1', port=9): Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it")))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\AMISH\OneDrive\Desktop\Assignmentt\trading_bot\bot\client.py", line 89, in initialize_client
+    client = BinanceFuturesClient(api_key, api_secret, base_url)
+  File "C:\Users\AMISH\OneDrive\Desktop\Assignmentt\trading_bot\bot\client.py", line 21, in __init__
+    self._client = Client(api_key, api_secret, testnet=True)
+                   ~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\AMISH\OneDrive\Desktop\Assignmentt\trading_bot\venv\Lib\site-packages\binance\client.py", line 344, in __init__
+    self.ping()
+    ~~~~~~~~~^^
+  File "C:\Users\AMISH\OneDrive\Desktop\Assignmentt\trading_bot\venv\Lib\site-packages\binance\client.py", line 570, in ping
+    return self._get('ping', version=self.PRIVATE_API_VERSION)
+           ~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\AMISH\OneDrive\Desktop\Assignmentt\trading_bot\venv\Lib\site-packages\binance\client.py", line 415, in _get
+    return self._request_api('get', path, signed, version, **kwargs)
+           ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\AMISH\OneDrive\Desktop\Assignmentt\trading_bot\venv\Lib\site-packages\binance\client.py", line 378, in _request_api
+    return self._request(method, uri, signed, **kwargs)
+           ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\AMISH\OneDrive\Desktop\Assignmentt\trading_bot\venv\Lib\site-packages\binance\client.py", line 358, in _request
+    self.response = getattr(self.session, method)(uri, **kwargs)
+                    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+  File "C:\Users\AMISH\OneDrive\Desktop\Assignmentt\trading_bot\venv\Lib\site-packages\requests\sessions.py", line 605, in get
+    return self.request("GET", url, **kwargs)
+           ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\AMISH\OneDrive\Desktop\Assignmentt\trading_bot\venv\Lib\site-packages\requests\sessions.py", line 592, in request
+    resp = self.send(prep, **send_kwargs)
+  File "C:\Users\AMISH\OneDrive\Desktop\Assignmentt\trading_bot\venv\Lib\site-packages\requests\sessions.py", line 706, in send
+    r = adapter.send(request, **kwargs)
+  File "C:\Users\AMISH\OneDrive\Desktop\Assignmentt\trading_bot\venv\Lib\site-packages\requests\adapters.py", line 672, in send
+    raise ProxyError(e, request=request)
+requests.exceptions.ProxyError: HTTPSConnectionPool(host='testnet.binance.vision', port=443): Max retries exceeded with url: /api/v3/ping (Caused by ProxyError('Unable to connect to proxy', NewConnectionError("HTTPSConnection(host='127.0.0.1', port=9): Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it")))
+2026-04-16 23:12:42 - trading_bot - ERROR - Error: Failed to initialize client: HTTPSConnectionPool(host='testnet.binance.vision', port=443): Max retries exceeded with url: /api/v3/ping (Caused by ProxyError('Unable to connect to proxy', NewConnectionError("HTTPSConnection(host='127.0.0.1', port=9): Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it")))
+2026-04-16 23:13:13 - trading_bot - DEBUG - Order type validated: MARKET
+2026-04-16 23:13:13 - trading_bot - DEBUG - Order type validated: MARKET
+2026-04-16 23:13:13 - trading_bot - DEBUG - Symbol validated: BTCUSDT
+2026-04-16 23:13:13 - trading_bot - DEBUG - Side validated: BUY
+2026-04-16 23:13:13 - trading_bot - DEBUG - Quantity validated: 0.001
+2026-04-16 23:13:13 - trading_bot - DEBUG - Order type validated: MARKET
+2026-04-16 23:13:13 - trading_bot - DEBUG - Price validation skipped for MARKET order
+2026-04-16 23:13:13 - trading_bot - DEBUG - Validated order request: {'symbol': 'BTCUSDT', 'side': 'BUY', 'type': 'MARKET', 'quantity': 0.001}
+2026-04-16 23:13:13 - trading_bot - INFO - Binance Futures client configured for https://testnet.binancefuture.com
+2026-04-16 23:13:13 - trading_bot - INFO - Binance Futures Testnet client initialized successfully
+2026-04-16 23:13:13 - trading_bot - INFO - API request: futures_time payload={}
+2026-04-16 23:13:13 - trading_bot - INFO - Binance Futures client configured for https://testnet.binancefuture.com
+2026-04-16 23:13:13 - trading_bot - INFO - Binance Futures Testnet client initialized successfully
+2026-04-16 23:13:13 - trading_bot - INFO - API request: futures_time payload={}
+2026-04-16 23:13:15 - trading_bot - ERROR - Unexpected error on futures_time
+Traceback (most recent call last):
+  File "C:\Users\AMISH\OneDrive\Desktop\Assignmentt\trading_bot\venv\Lib\site-packages\urllib3\connection.py", line 204, in _new_conn
+    sock = connection.create_connection(
+        (self._dns_host, self.port),
+    ...<2 lines>...
+        socket_options=self.socket_options,
+    )
+  File "C:\Users\AMISH\OneDrive\Desktop\Assignmentt\trading_bot\venv\Lib\site-packages\urllib3\util\connection.py", line 85, in create_connection
+    raise err
+  File "C:\Users\AMISH\OneDrive\Desktop\Assignmentt\trading_bot\venv\Lib\site-packages\urllib3\util\connection.py", line 73, in create_connection
+    sock.connect(sa)
+    ~~~~~~~~~~~~^^^^
+ConnectionRefusedError: [WinError 10061] No connection could be made because the target machine actively refused it
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\AMISH\OneDrive\Desktop\Assignmentt\trading_bot\venv\Lib\site-packages\urllib3\connectionpool.py", line 773, in urlopen
+    self._prepare_proxy(conn)
+    ~~~~~~~~~~~~~~~~~~~^^^^^^
+  File "C:\Users\AMISH\OneDrive\Desktop\Assignmentt\trading_bot\venv\Lib\site-packages\urllib3\connectionpool.py", line 1042, in _prepare_proxy
+    conn.connect()
+    ~~~~~~~~~~~~^^
+  File "C:\Users\AMISH\OneDrive\Desktop\Assignmentt\trading_bot\venv\Lib\site-packages\urllib3\connection.py", line 759, in connect
+    self.sock = sock = self._new_conn()
+                       ~~~~~~~~~~~~~~^^
+  File "C:\Users\AMISH\OneDrive\Desktop\Assignmentt\trading_bot\venv\Lib\site-packages\urllib3\connection.py", line 219, in _new_conn
+    raise NewConnectionError(
+        self, f"Failed to establish a new connection: {e}"
+    ) from e
+urllib3.exceptions.NewConnectionError: HTTPSConnection(host='127.0.0.1', port=9): Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it
+
+The above exception was the direct cause of the following exception:
+
+urllib3.exceptions.ProxyError: ('Unable to connect to proxy', NewConnectionError("HTTPSConnection(host='127.0.0.1', port=9): Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it"))
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\AMISH\OneDrive\Desktop\Assignmentt\trading_bot\venv\Lib\site-packages\requests\adapters.py", line 645, in send
+    resp = conn.urlopen(
+        method=request.method,
+    ...<9 lines>...
+        chunked=chunked,
+    )
+  File "C:\Users\AMISH\OneDrive\Desktop\Assignmentt\trading_bot\venv\Lib\site-packages\urllib3\connectionpool.py", line 841, in urlopen
+    retries = retries.increment(
+        method, url, error=new_e, _pool=self, _stacktrace=sys.exc_info()[2]
+    )
+  File "C:\Users\AMISH\OneDrive\Desktop\Assignmentt\trading_bot\venv\Lib\site-packages\urllib3\util\retry.py", line 535, in increment
+    raise MaxRetryError(_pool, url, reason) from reason  # type: ignore[arg-type]
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+urllib3.exceptions.MaxRetryError: HTTPSConnectionPool(host='testnet.binancefuture.com', port=443): Max retries exceeded with url: /fapi/v1/time (Caused by ProxyError('Unable to connect to proxy', NewConnectionError("HTTPSConnection(host='127.0.0.1', port=9): Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it")))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\AMISH\OneDrive\Desktop\Assignmentt\trading_bot\bot\client.py", line 46, in _request
+    response = method(**payload)
+  File "C:\Users\AMISH\OneDrive\Desktop\Assignmentt\trading_bot\venv\Lib\site-packages\binance\client.py", line 6153, in futures_time
+    return self._request_futures_api('get', 'time')
+           ~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+  File "C:\Users\AMISH\OneDrive\Desktop\Assignmentt\trading_bot\venv\Lib\site-packages\binance\client.py", line 383, in _request_futures_api
+    return self._request(method, uri, signed, True, **kwargs)
+           ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\AMISH\OneDrive\Desktop\Assignmentt\trading_bot\venv\Lib\site-packages\binance\client.py", line 358, in _request
+    self.response = getattr(self.session, method)(uri, **kwargs)
+                    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+  File "C:\Users\AMISH\OneDrive\Desktop\Assignmentt\trading_bot\venv\Lib\site-packages\requests\sessions.py", line 605, in get
+    return self.request("GET", url, **kwargs)
+           ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\AMISH\OneDrive\Desktop\Assignmentt\trading_bot\venv\Lib\site-packages\requests\sessions.py", line 592, in request
+    resp = self.send(prep, **send_kwargs)
+  File "C:\Users\AMISH\OneDrive\Desktop\Assignmentt\trading_bot\venv\Lib\site-packages\requests\sessions.py", line 706, in send
+    r = adapter.send(request, **kwargs)
+  File "C:\Users\AMISH\OneDrive\Desktop\Assignmentt\trading_bot\venv\Lib\site-packages\requests\adapters.py", line 672, in send
+    raise ProxyError(e, request=request)
+requests.exceptions.ProxyError: HTTPSConnectionPool(host='testnet.binancefuture.com', port=443): Max retries exceeded with url: /fapi/v1/time (Caused by ProxyError('Unable to connect to proxy', NewConnectionError("HTTPSConnection(host='127.0.0.1', port=9): Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it")))
+2026-04-16 23:13:15 - trading_bot - ERROR - Connection test failed: Unexpected client error: HTTPSConnectionPool(host='testnet.binancefuture.com', port=443): Max retries exceeded with url: /fapi/v1/time (Caused by ProxyError('Unable to connect to proxy', NewConnectionError("HTTPSConnection(host='127.0.0.1', port=9): Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it")))
+2026-04-16 23:13:15 - trading_bot - ERROR - Error: Unexpected client error: HTTPSConnectionPool(host='testnet.binancefuture.com', port=443): Max retries exceeded with url: /fapi/v1/time (Caused by ProxyError('Unable to connect to proxy', NewConnectionError("HTTPSConnection(host='127.0.0.1', port=9): Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it")))
+2026-04-16 23:13:15 - trading_bot - ERROR - Unexpected error on futures_time
+Traceback (most recent call last):
+  File "C:\Users\AMISH\OneDrive\Desktop\Assignmentt\trading_bot\venv\Lib\site-packages\urllib3\connection.py", line 204, in _new_conn
+    sock = connection.create_connection(
+        (self._dns_host, self.port),
+    ...<2 lines>...
+        socket_options=self.socket_options,
+    )
+  File "C:\Users\AMISH\OneDrive\Desktop\Assignmentt\trading_bot\venv\Lib\site-packages\urllib3\util\connection.py", line 85, in create_connection
+    raise err
+  File "C:\Users\AMISH\OneDrive\Desktop\Assignmentt\trading_bot\venv\Lib\site-packages\urllib3\util\connection.py", line 73, in create_connection
+    sock.connect(sa)
+    ~~~~~~~~~~~~^^^^
+ConnectionRefusedError: [WinError 10061] No connection could be made because the target machine actively refused it
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\AMISH\OneDrive\Desktop\Assignmentt\trading_bot\venv\Lib\site-packages\urllib3\connectionpool.py", line 773, in urlopen
+    self._prepare_proxy(conn)
+    ~~~~~~~~~~~~~~~~~~~^^^^^^
+  File "C:\Users\AMISH\OneDrive\Desktop\Assignmentt\trading_bot\venv\Lib\site-packages\urllib3\connectionpool.py", line 1042, in _prepare_proxy
+    conn.connect()
+    ~~~~~~~~~~~~^^
+  File "C:\Users\AMISH\OneDrive\Desktop\Assignmentt\trading_bot\venv\Lib\site-packages\urllib3\connection.py", line 759, in connect
+    self.sock = sock = self._new_conn()
+                       ~~~~~~~~~~~~~~^^
+  File "C:\Users\AMISH\OneDrive\Desktop\Assignmentt\trading_bot\venv\Lib\site-packages\urllib3\connection.py", line 219, in _new_conn
+    raise NewConnectionError(
+        self, f"Failed to establish a new connection: {e}"
+    ) from e
+urllib3.exceptions.NewConnectionError: HTTPSConnection(host='127.0.0.1', port=9): Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it
+
+The above exception was the direct cause of the following exception:
+
+urllib3.exceptions.ProxyError: ('Unable to connect to proxy', NewConnectionError("HTTPSConnection(host='127.0.0.1', port=9): Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it"))
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\AMISH\OneDrive\Desktop\Assignmentt\trading_bot\venv\Lib\site-packages\requests\adapters.py", line 645, in send
+    resp = conn.urlopen(
+        method=request.method,
+    ...<9 lines>...
+        chunked=chunked,
+    )
+  File "C:\Users\AMISH\OneDrive\Desktop\Assignmentt\trading_bot\venv\Lib\site-packages\urllib3\connectionpool.py", line 841, in urlopen
+    retries = retries.increment(
+        method, url, error=new_e, _pool=self, _stacktrace=sys.exc_info()[2]
+    )
+  File "C:\Users\AMISH\OneDrive\Desktop\Assignmentt\trading_bot\venv\Lib\site-packages\urllib3\util\retry.py", line 535, in increment
+    raise MaxRetryError(_pool, url, reason) from reason  # type: ignore[arg-type]
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+urllib3.exceptions.MaxRetryError: HTTPSConnectionPool(host='testnet.binancefuture.com', port=443): Max retries exceeded with url: /fapi/v1/time (Caused by ProxyError('Unable to connect to proxy', NewConnectionError("HTTPSConnection(host='127.0.0.1', port=9): Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it")))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\AMISH\OneDrive\Desktop\Assignmentt\trading_bot\bot\client.py", line 46, in _request
+    response = method(**payload)
+  File "C:\Users\AMISH\OneDrive\Desktop\Assignmentt\trading_bot\venv\Lib\site-packages\binance\client.py", line 6153, in futures_time
+    return self._request_futures_api('get', 'time')
+           ~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+  File "C:\Users\AMISH\OneDrive\Desktop\Assignmentt\trading_bot\venv\Lib\site-packages\binance\client.py", line 383, in _request_futures_api
+    return self._request(method, uri, signed, True, **kwargs)
+           ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\AMISH\OneDrive\Desktop\Assignmentt\trading_bot\venv\Lib\site-packages\binance\client.py", line 358, in _request
+    self.response = getattr(self.session, method)(uri, **kwargs)
+                    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+  File "C:\Users\AMISH\OneDrive\Desktop\Assignmentt\trading_bot\venv\Lib\site-packages\requests\sessions.py", line 605, in get
+    return self.request("GET", url, **kwargs)
+           ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\AMISH\OneDrive\Desktop\Assignmentt\trading_bot\venv\Lib\site-packages\requests\sessions.py", line 592, in request
+    resp = self.send(prep, **send_kwargs)
+  File "C:\Users\AMISH\OneDrive\Desktop\Assignmentt\trading_bot\venv\Lib\site-packages\requests\sessions.py", line 706, in send
+    r = adapter.send(request, **kwargs)
+  File "C:\Users\AMISH\OneDrive\Desktop\Assignmentt\trading_bot\venv\Lib\site-packages\requests\adapters.py", line 672, in send
+    raise ProxyError(e, request=request)
+requests.exceptions.ProxyError: HTTPSConnectionPool(host='testnet.binancefuture.com', port=443): Max retries exceeded with url: /fapi/v1/time (Caused by ProxyError('Unable to connect to proxy', NewConnectionError("HTTPSConnection(host='127.0.0.1', port=9): Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it")))
+2026-04-16 23:13:15 - trading_bot - ERROR - Connection test failed: Unexpected client error: HTTPSConnectionPool(host='testnet.binancefuture.com', port=443): Max retries exceeded with url: /fapi/v1/time (Caused by ProxyError('Unable to connect to proxy', NewConnectionError("HTTPSConnection(host='127.0.0.1', port=9): Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it")))
+2026-04-16 23:13:15 - trading_bot - ERROR - Connection failed: Unexpected client error: HTTPSConnectionPool(host='testnet.binancefuture.com', port=443): Max retries exceeded with url: /fapi/v1/time (Caused by ProxyError('Unable to connect to proxy', NewConnectionError("HTTPSConnection(host='127.0.0.1', port=9): Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it")))
+2026-04-16 23:18:58 - trading_bot - INFO - Binance Futures client configured for https://testnet.binancefuture.com
+2026-04-16 23:18:58 - trading_bot - INFO - Binance Futures Testnet client initialized successfully
+2026-04-16 23:18:58 - trading_bot - INFO - API request: futures_time payload={}
+2026-04-16 23:19:03 - trading_bot - INFO - API response: {'serverTime': 1776361742127}
+2026-04-16 23:19:03 - trading_bot - INFO - Connection to Binance Futures Testnet successful
+2026-04-16 23:19:26 - trading_bot - DEBUG - Order type validated: MARKET
+2026-04-16 23:19:26 - trading_bot - DEBUG - Order type validated: MARKET
+2026-04-16 23:19:26 - trading_bot - DEBUG - Symbol validated: BTCUSDT
+2026-04-16 23:19:26 - trading_bot - DEBUG - Side validated: BUY
+2026-04-16 23:19:26 - trading_bot - DEBUG - Quantity validated: 0.001
+2026-04-16 23:19:26 - trading_bot - DEBUG - Order type validated: MARKET
+2026-04-16 23:19:26 - trading_bot - DEBUG - Price validation skipped for MARKET order
+2026-04-16 23:19:26 - trading_bot - DEBUG - Validated order request: {'symbol': 'BTCUSDT', 'side': 'BUY', 'type': 'MARKET', 'quantity': 0.001}
+2026-04-16 23:19:26 - trading_bot - INFO - Binance Futures client configured for https://testnet.binancefuture.com
+2026-04-16 23:19:26 - trading_bot - INFO - Binance Futures Testnet client initialized successfully
+2026-04-16 23:19:26 - trading_bot - INFO - API request: futures_time payload={}
+2026-04-16 23:19:26 - trading_bot - INFO - Binance Futures client configured for https://testnet.binancefuture.com
+2026-04-16 23:19:26 - trading_bot - INFO - Binance Futures Testnet client initialized successfully
+2026-04-16 23:19:26 - trading_bot - INFO - API request: futures_time payload={}
+2026-04-16 23:19:29 - trading_bot - INFO - API response: {'serverTime': 1776361768409}
+2026-04-16 23:19:29 - trading_bot - INFO - Connection to Binance Futures Testnet successful
+2026-04-16 23:19:29 - trading_bot - INFO - API response: {'serverTime': 1776361768418}
+2026-04-16 23:19:29 - trading_bot - INFO - Connection to Binance Futures Testnet successful
+2026-04-16 23:19:29 - trading_bot - DEBUG - Order type validated: MARKET
+2026-04-16 23:19:29 - trading_bot - DEBUG - Symbol validated: BTCUSDT
+2026-04-16 23:19:29 - trading_bot - DEBUG - Side validated: BUY
+2026-04-16 23:19:29 - trading_bot - DEBUG - Quantity validated: 0.001
+2026-04-16 23:19:29 - trading_bot - DEBUG - Order type validated: MARKET
+2026-04-16 23:19:29 - trading_bot - DEBUG - Price validation skipped for MARKET order
+2026-04-16 23:19:29 - trading_bot - DEBUG - Validated order request: {'symbol': 'BTCUSDT', 'side': 'BUY', 'type': 'MARKET', 'quantity': 0.001}
+2026-04-16 23:19:29 - trading_bot - INFO - Submitting order request: {'symbol': 'BTCUSDT', 'side': 'BUY', 'type': 'MARKET', 'quantity': 0.001}
+2026-04-16 23:19:29 - trading_bot - INFO - API request: futures_create_order payload={'symbol': 'BTCUSDT', 'side': 'BUY', 'type': 'MARKET', 'quantity': 0.001}
+2026-04-16 23:19:29 - trading_bot - ERROR - Binance API error on futures_create_order: status=401 code=-2014 message=API-key format invalid.
+2026-04-16 23:19:29 - trading_bot - ERROR - Failed to place order: Binance API error: API-key format invalid.
+2026-04-16 23:19:29 - trading_bot - ERROR - Error: Binance API error: API-key format invalid.
+2026-04-17 00:07:31 - trading_bot - DEBUG - Order type validated: MARKET
+2026-04-17 00:07:31 - trading_bot - DEBUG - Order type validated: MARKET
+2026-04-17 00:07:31 - trading_bot - DEBUG - Symbol validated: BTCUSDT
+2026-04-17 00:07:31 - trading_bot - DEBUG - Side validated: BUY
+2026-04-17 00:07:31 - trading_bot - DEBUG - Quantity validated: 0.001
+2026-04-17 00:07:31 - trading_bot - DEBUG - Order type validated: MARKET
+2026-04-17 00:07:31 - trading_bot - DEBUG - Price validation skipped for MARKET order
+2026-04-17 00:07:31 - trading_bot - DEBUG - Validated order request: {'symbol': 'BTCUSDT', 'side': 'BUY', 'type': 'MARKET', 'quantity': 0.001}
+2026-04-17 00:07:31 - trading_bot - INFO - Binance Futures client configured for https://testnet.binancefuture.com
+2026-04-17 00:07:31 - trading_bot - INFO - Binance Futures Testnet client initialized successfully
+2026-04-17 00:07:31 - trading_bot - INFO - API request: futures_time payload={}
+2026-04-17 00:07:31 - trading_bot - INFO - Binance Futures client configured for https://testnet.binancefuture.com
+2026-04-17 00:07:31 - trading_bot - INFO - Binance Futures Testnet client initialized successfully
+2026-04-17 00:07:31 - trading_bot - INFO - API request: futures_time payload={}
+2026-04-17 00:07:33 - trading_bot - INFO - API response: {'serverTime': 1776364652840}
+2026-04-17 00:07:33 - trading_bot - INFO - Connection to Binance Futures Testnet successful
+2026-04-17 00:07:33 - trading_bot - DEBUG - Order type validated: MARKET
+2026-04-17 00:07:33 - trading_bot - DEBUG - Symbol validated: BTCUSDT
+2026-04-17 00:07:33 - trading_bot - DEBUG - Side validated: BUY
+2026-04-17 00:07:33 - trading_bot - DEBUG - Quantity validated: 0.001
+2026-04-17 00:07:33 - trading_bot - DEBUG - Order type validated: MARKET
+2026-04-17 00:07:33 - trading_bot - DEBUG - Price validation skipped for MARKET order
+2026-04-17 00:07:33 - trading_bot - DEBUG - Validated order request: {'symbol': 'BTCUSDT', 'side': 'BUY', 'type': 'MARKET', 'quantity': 0.001}
+2026-04-17 00:07:33 - trading_bot - INFO - Submitting order request: {'symbol': 'BTCUSDT', 'side': 'BUY', 'type': 'MARKET', 'quantity': 0.001}
+2026-04-17 00:07:33 - trading_bot - INFO - API request: futures_create_order payload={'symbol': 'BTCUSDT', 'side': 'BUY', 'type': 'MARKET', 'quantity': 0.001}
+2026-04-17 00:07:33 - trading_bot - INFO - API response: {'orderId': 13040612744, 'symbol': 'BTCUSDT', 'status': 'NEW', 'clientOrderId': 'b9zVNY8lmTzrGwlSCtTjm6', 'price': '0.00', 'avgPrice': '0.00', 'origQty': '0.0010', 'executedQty': '0.0000', 'cumQty': '0.0000', 'cumQuote': '0.000000', 'timeInForce': 'GTC', 'type': 'MARKET', 'reduceOnly': False, 'closePosition': False, 'side': 'BUY', 'positionSide': 'BOTH', 'stopPrice': '0.00', 'workingType': 'CONTRACT_PRICE', 'priceProtect': False, 'origType': 'MARKET', 'priceMatch': 'NONE', 'selfTradePreventionMode': 'EXPIRE_MAKER', 'goodTillDate': 0, 'updateTime': 1776364653051}
+2026-04-17 00:07:33 - trading_bot - INFO - Order placed successfully: 13040612744
+2026-04-17 00:10:14 - trading_bot - INFO - Binance Futures client configured for https://testnet.binancefuture.com
+2026-04-17 00:10:14 - trading_bot - INFO - Binance Futures Testnet client initialized successfully
+2026-04-17 00:10:14 - trading_bot - INFO - API request: futures_time payload={}
+2026-04-17 00:10:15 - trading_bot - INFO - API response: {'serverTime': 1776364815301}
+2026-04-17 00:10:15 - trading_bot - INFO - Connection to Binance Futures Testnet successful
+2026-04-17 00:10:29 - trading_bot - DEBUG - Order type validated: MARKET
+2026-04-17 00:10:29 - trading_bot - DEBUG - Order type validated: MARKET
+2026-04-17 00:10:29 - trading_bot - DEBUG - Symbol validated: BTCUSDT
+2026-04-17 00:10:29 - trading_bot - DEBUG - Side validated: BUY
+2026-04-17 00:10:29 - trading_bot - DEBUG - Quantity validated: 0.001
+2026-04-17 00:10:29 - trading_bot - DEBUG - Order type validated: MARKET
+2026-04-17 00:10:29 - trading_bot - DEBUG - Price validation skipped for MARKET order
+2026-04-17 00:10:29 - trading_bot - DEBUG - Validated order request: {'symbol': 'BTCUSDT', 'side': 'BUY', 'type': 'MARKET', 'quantity': 0.001}
+2026-04-17 00:10:29 - trading_bot - INFO - Binance Futures client configured for https://testnet.binancefuture.com
+2026-04-17 00:10:29 - trading_bot - INFO - Binance Futures Testnet client initialized successfully
+2026-04-17 00:10:29 - trading_bot - INFO - API request: futures_time payload={}
+2026-04-17 00:10:30 - trading_bot - INFO - API response: {'serverTime': 1776364830039}
+2026-04-17 00:10:30 - trading_bot - INFO - Connection to Binance Futures Testnet successful
+2026-04-17 00:10:30 - trading_bot - DEBUG - Order type validated: MARKET
+2026-04-17 00:10:30 - trading_bot - DEBUG - Symbol validated: BTCUSDT
+2026-04-17 00:10:30 - trading_bot - DEBUG - Side validated: BUY
+2026-04-17 00:10:30 - trading_bot - DEBUG - Quantity validated: 0.001
+2026-04-17 00:10:30 - trading_bot - DEBUG - Order type validated: MARKET
+2026-04-17 00:10:30 - trading_bot - DEBUG - Price validation skipped for MARKET order
+2026-04-17 00:10:30 - trading_bot - DEBUG - Validated order request: {'symbol': 'BTCUSDT', 'side': 'BUY', 'type': 'MARKET', 'quantity': 0.001}
+2026-04-17 00:10:30 - trading_bot - INFO - Submitting order request: {'symbol': 'BTCUSDT', 'side': 'BUY', 'type': 'MARKET', 'quantity': 0.001}
+2026-04-17 00:10:30 - trading_bot - INFO - API request: futures_create_order payload={'symbol': 'BTCUSDT', 'side': 'BUY', 'type': 'MARKET', 'quantity': 0.001}
+2026-04-17 00:10:30 - trading_bot - INFO - API response: {'orderId': 13040618764, 'symbol': 'BTCUSDT', 'status': 'NEW', 'clientOrderId': 'jEkVJBy8z4TI63dACKkQi0', 'price': '0.00', 'avgPrice': '0.00', 'origQty': '0.0010', 'executedQty': '0.0000', 'cumQty': '0.0000', 'cumQuote': '0.000000', 'timeInForce': 'GTC', 'type': 'MARKET', 'reduceOnly': False, 'closePosition': False, 'side': 'BUY', 'positionSide': 'BOTH', 'stopPrice': '0.00', 'workingType': 'CONTRACT_PRICE', 'priceProtect': False, 'origType': 'MARKET', 'priceMatch': 'NONE', 'selfTradePreventionMode': 'EXPIRE_MAKER', 'goodTillDate': 0, 'updateTime': 1776364830203}
+2026-04-17 00:10:30 - trading_bot - INFO - Order placed successfully: 13040618764
